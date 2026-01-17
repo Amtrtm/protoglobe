@@ -1,26 +1,55 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-canvas: #050510;
+  --color-panel: rgba(26, 31, 53, 0.6);
+  --color-polyglow: #00f3ff;
+  --color-polyglow-dim: rgba(0, 243, 255, 0.1);
+  --color-accent-red: #ff2a2a;
+  --color-accent-green: #00ff66;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-marquee: marquee 25s linear infinite;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
   }
+}
+
+:root {
+  --background: #050510;
+  --foreground: #e0e0e0;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  /* Fullscreen app */
+  font-family: var(--font-geist-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: var(--color-panel);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.polyglow-text {
+  color: var(--color-polyglow);
+  text-shadow: 0 0 10px var(--color-polyglow-dim), 0 0 5px var(--color-polyglow);
+}
+
+.polyglow-border {
+  border-color: var(--color-polyglow);
+  box-shadow: 0 0 10px var(--color-polyglow-dim), inset 0 0 5px var(--color-polyglow-dim);
 }

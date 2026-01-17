@@ -1,0 +1,68 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic: © OpenStreetMap © Carto
+    - generic:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - heading "POLYGLOBE ENTERPRISE" [level=1] [ref=e7]:
+            - img [ref=e8]
+            - text: POLYGLOBE
+            - generic [ref=e11]: ENTERPRISE
+          - generic [ref=e12]:
+            - button "BREAKING" [ref=e13]
+            - button "OSINT" [ref=e14]
+            - button "LIVE" [ref=e15]
+        - generic [ref=e16]:
+          - generic [ref=e17]:
+            - img [ref=e18]
+            - textbox "Search markets..." [ref=e21]
+          - button [ref=e22]:
+            - img [ref=e23]
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - generic [ref=e29]: "[ACTIVE]"
+          - text: Project Alpha
+          - generic [ref=e30]: "@ New York"
+        - generic [ref=e31]:
+          - generic [ref=e32]: "[DEPLOYED]"
+          - text: Project Beta
+          - generic [ref=e33]: "@ London"
+        - generic [ref=e34]:
+          - generic [ref=e35]: "[MAINTENANCE]"
+          - text: Project Gamma
+          - generic [ref=e36]: "@ Tokyo"
+        - generic [ref=e37]:
+          - generic [ref=e38]: "[ACTIVE]"
+          - text: Project Delta
+          - generic [ref=e39]: "@ Berlin"
+        - generic [ref=e40]:
+          - generic [ref=e41]: "[ACTIVE]"
+          - text: Project Alpha
+          - generic [ref=e42]: "@ New York"
+        - generic [ref=e43]:
+          - generic [ref=e44]: "[DEPLOYED]"
+          - text: Project Beta
+          - generic [ref=e45]: "@ London"
+        - generic [ref=e46]:
+          - generic [ref=e47]: "[MAINTENANCE]"
+          - text: Project Gamma
+          - generic [ref=e48]: "@ Tokyo"
+        - generic [ref=e49]:
+          - generic [ref=e50]: "[ACTIVE]"
+          - text: Project Delta
+          - generic [ref=e51]: "@ Berlin"
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - heading "PROJECTS LIVE" [level=3] [ref=e55]
+          - img [ref=e56]
+        - generic [ref=e58]: 12 / 15
+        - generic [ref=e59]:
+          - img [ref=e60]
+          - text: +3 deployed today
+      - generic [ref=e63]: Replicating PolyGlobe Logic // Visualization
+  - alert [ref=e64]
+```

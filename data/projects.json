@@ -1,0 +1,142 @@
+[
+  {
+    "id": "1",
+    "name": "Alpha",
+    "coords": [
+      -74.006,
+      40.7128
+    ],
+    "status": "active",
+    "details": "Financial Data Stream"
+  },
+  {
+    "id": "2",
+    "name": "Beta",
+    "coords": [
+      -0.1278,
+      51.5074
+    ],
+    "status": "deployed",
+    "details": "Security Infrastructure"
+  },
+  {
+    "id": "3",
+    "name": "Gamma",
+    "coords": [
+      139.6917,
+      35.6895
+    ],
+    "status": "maintenance",
+    "details": "Grid Optimization"
+  },
+  {
+    "id": "4",
+    "name": "Delta",
+    "coords": [
+      13.405,
+      52.52
+    ],
+    "status": "active",
+    "details": "Logistics Hub"
+  },
+  {
+    "id": "5",
+    "name": "Epsilon",
+    "coords": [
+      151.2093,
+      -33.8688
+    ],
+    "status": "active",
+    "details": "Oceanic Monitoring"
+  },
+  {
+    "id": "6",
+    "name": "Zeta",
+    "coords": [
+      -43.1729,
+      -22.9068
+    ],
+    "status": "deployed",
+    "details": "Urban Transport"
+  },
+  {
+    "id": "7",
+    "name": "Eta",
+    "coords": [
+      55.2708,
+      25.2048
+    ],
+    "status": "active",
+    "details": "Smart City Core"
+  },
+  {
+    "name": "Omega Test",
+    "coords": [
+      -74,
+      40.7
+    ],
+    "status": "active",
+    "details": "Test Project",
+    "id": "1768659960514"
+  },
+  {
+    "name": "Tets2",
+    "coords": [
+      47,
+      74
+    ],
+    "status": "active",
+    "details": "testing",
+    "id": "1768660138913"
+  },
+  {
+    "name": "Tokyo Drift",
+    "coords": [
+      138.2,
+      36.2
+    ],
+    "status": "active",
+    "details": "Racing HQ",
+    "id": "1768660630100"
+  },
+  {
+    "name": "Sydney Server",
+    "coords": [
+      133.7751,
+      -25.2744
+    ],
+    "status": "active",
+    "details": "Oceania Node",
+    "id": "1768660789466"
+  },
+  {
+    "name": "123",
+    "coords": [
+      34.8516,
+      31.0461
+    ],
+    "status": "active",
+    "details": "1111",
+    "id": "1768660994474"
+  },
+  {
+    "name": "111",
+    "coords": [
+      34.8516,
+      31.0461
+    ],
+    "status": "active",
+    "details": "123",
+    "id": "1768661002416"
+  },
+  {
+    "name": "1245",
+    "coords": [
+      34.8516,
+      31.0461
+    ],
+    "status": "active",
+    "details": "234",
+    "id": "1768661013339"
+  }
+]

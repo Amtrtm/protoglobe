@@ -1,0 +1,52 @@
+
+export interface Country {
+    name: string;
+    lat: number;
+    lng: number;
+}
+
+export const COUNTRIES: Country[] = [
+    { name: "Afghanistan", lat: 33.9391, lng: 67.7100 },
+    { name: "Albania", lat: 41.1533, lng: 20.1683 },
+    { name: "Algeria", lat: 28.0339, lng: 1.6596 },
+    { name: "Argentina", lat: -38.4161, lng: -63.6167 },
+    { name: "Australia", lat: -25.2744, lng: 133.7751 },
+    { name: "Austria", lat: 47.5162, lng: 14.5501 },
+    { name: "Belgium", lat: 50.5039, lng: 4.4699 },
+    { name: "Brazil", lat: -14.2350, lng: -51.9253 },
+    { name: "Canada", lat: 56.1304, lng: -106.3468 },
+    { name: "China", lat: 35.8617, lng: 104.1954 },
+    { name: "Denmark", lat: 56.2639, lng: 9.5018 },
+    { name: "Egypt", lat: 26.8206, lng: 30.8025 },
+    { name: "Finland", lat: 61.9241, lng: 25.7482 },
+    { name: "France", lat: 46.2276, lng: 2.2137 },
+    { name: "Germany", lat: 51.1657, lng: 10.4515 },
+    { name: "Greece", lat: 39.0742, lng: 21.8243 },
+    { name: "India", lat: 20.5937, lng: 78.9629 },
+    { name: "Indonesia", lat: -0.7893, lng: 113.9213 },
+    { name: "Iran", lat: 32.4279, lng: 53.6880 },
+    { name: "Ireland", lat: 53.1424, lng: -7.6921 },
+    { name: "Israel", lat: 31.0461, lng: 34.8516 },
+    { name: "Italy", lat: 41.8719, lng: 12.5674 },
+    { name: "Japan", lat: 36.2048, lng: 138.2529 },
+    { name: "Mexico", lat: 23.6345, lng: -102.5528 },
+    { name: "Netherlands", lat: 52.1326, lng: 5.2913 },
+    { name: "New Zealand", lat: -40.9006, lng: 174.8860 },
+    { name: "Nigeria", lat: 9.0820, lng: 8.6753 },
+    { name: "Norway", lat: 60.4720, lng: 8.4689 },
+    { name: "Pakistan", lat: 30.3753, lng: 69.3451 },
+    { name: "Poland", lat: 51.9194, lng: 19.1451 },
+    { name: "Portugal", lat: 39.3999, lng: -8.2245 },
+    { name: "Russia", lat: 61.5240, lng: 105.3188 },
+    { name: "Saudi Arabia", lat: 23.8859, lng: 45.0792 },
+    { name: "South Africa", lat: -30.5595, lng: 22.9375 },
+    { name: "South Korea", lat: 35.9078, lng: 127.7669 },
+    { name: "Spain", lat: 40.4637, lng: -3.7492 },
+    { name: "Sweden", lat: 60.1282, lng: 18.6435 },
+    { name: "Switzerland", lat: 46.8182, lng: 8.2275 },
+    { name: "Thailand", lat: 15.8700, lng: 100.9925 },
+    { name: "Turkey", lat: 38.9637, lng: 35.2433 },
+    { name: "United Kingdom", lat: 55.3781, lng: -3.4360 },
+    { name: "United States", lat: 37.0902, lng: -95.7129 },
+    { name: "Vietnam", lat: 14.0583, lng: 108.2772 }
+];
