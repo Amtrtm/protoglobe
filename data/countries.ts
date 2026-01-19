@@ -48,5 +48,11 @@ export const COUNTRIES: Country[] = [
     { name: "Turkey", lat: 38.9637, lng: 35.2433 },
     { name: "United Kingdom", lat: 55.3781, lng: -3.4360 },
     { name: "United States", lat: 37.0902, lng: -95.7129 },
-    { name: "Vietnam", lat: 14.0583, lng: 108.2772 }
+    { name: "Vietnam", lat: 14.0583, lng: 108.2772 },
+    { name: "Azerbaijan", lat: 40.1431, lng: 47.5769 },
+    { name: "Serbia", lat: 44.0165, lng: 21.0059 },
+    { name: "Morroco", lat: 31.7917, lng: -7.0926 },
+    { name: "United-emirates", lat: 24.4539, lng: 54.3773 },
+    { name: "Colombia", lat: 4.5709, lng: -74.2973 },
+    { name: "Cyprus", lat: 35.1264, lng: 33.4299 }
 ];

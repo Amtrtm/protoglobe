@@ -14,6 +14,7 @@ interface GlobeVizProps {
 
 export default function GlobeViz({ autoRotate = true, children }: GlobeVizProps) {
     const mapRef = useRef<MapRef>(null);
+    const [isMounted, setIsMounted] = useState(false);
     // Default to a zoomed out view of the globe
     const [viewState, setViewState] = useState({
         longitude: -98,
@@ -22,6 +23,11 @@ export default function GlobeViz({ autoRotate = true, children }: GlobeVizProps)
         pitch: 0,
         bearing: 0
     });
+
+    // Only render on client to avoid hydration issues
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
 
     // Rotation Animation
     useEffect(() => {
@@ -33,7 +39,7 @@ export default function GlobeViz({ autoRotate = true, children }: GlobeVizProps)
             if (autoRotate) {
                 setViewState((prev) => ({
                     ...prev,
-                    longitude: prev.longitude + 0.05, // Adjust speed here
+                    longitude: prev.longitude + 0.2, // Adjust speed here
                 }));
             }
             animationFrameId = requestAnimationFrame(rotate);
@@ -43,6 +49,11 @@ export default function GlobeViz({ autoRotate = true, children }: GlobeVizProps)
 
         return () => cancelAnimationFrame(animationFrameId);
     }, [autoRotate]);
+
+    // Don't render map during SSR to avoid hydration issues
+    if (!isMounted) {
+        return <div className="w-full h-full absolute inset-0 bg-canvas" />;
+    }
 
     return (
         <div className="w-full h-full absolute inset-0 bg-canvas">

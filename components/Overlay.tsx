@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Globe, Pause, Play, Search, Activity, Zap } from 'lucide-react';
 
 interface OverlayProps {
@@ -9,13 +9,22 @@ interface OverlayProps {
 }
 
 export default function Overlay({ isRotating, setIsRotating }: OverlayProps) {
-    // Mock Data for the Ticker
-    const projects = [
-        { name: "Project Alpha", location: "New York", status: "Active" },
-        { name: "Project Beta", location: "London", status: "Deployed" },
-        { name: "Project Gamma", location: "Tokyo", status: "Maintenance" },
-        { name: "Project Delta", location: "Berlin", status: "Active" },
-    ];
+    // Real Data for the Ticker - fetch from API to avoid hydration mismatch
+    const [projects, setProjects] = useState<Array<{name: string, location: string, status: string}>>([]);
+
+    useEffect(() => {
+        fetch('/api/projects')
+            .then(res => res.json())
+            .then(data => {
+                const formattedProjects = data.map((p: any) => ({
+                    name: p.name,
+                    location: `${p.coords[0].toFixed(2)}, ${p.coords[1].toFixed(2)}`,
+                    status: p.status
+                }));
+                setProjects(formattedProjects);
+            })
+            .catch(err => console.error('Failed to fetch projects:', err));
+    }, []);
 
     return (
         <div className="absolute inset-0 pointer-events-none flex flex-col justify-between">

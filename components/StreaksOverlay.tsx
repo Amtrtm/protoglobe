@@ -110,7 +110,11 @@ export default function StreaksOverlay({ projects }: StreaksOverlayProps) {
             // We'll just spawn and let them fly. If the target is behind, it will fly to the "screen coordinate" which might be valid or off.
             // Actually, standard project() on a Globe view sometimes returns weird values for back-facing points.
 
+            if (projects.length === 0) return; // Guard against empty projects array
+
             const p = projects[Math.floor(Math.random() * projects.length)];
+            if (!p || !p.coords) return; // Guard against malformed project data
+
             streaksRef.current.push(new Streak(canvas.width, canvas.height, p.coords[1], p.coords[0]));
         };
 
