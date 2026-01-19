@@ -10,7 +10,7 @@ interface OverlayProps {
 
 export default function Overlay({ isRotating, setIsRotating }: OverlayProps) {
     // Real Data for the Ticker - fetch from API to avoid hydration mismatch
-    const [projects, setProjects] = useState<Array<{name: string, location: string, status: string}>>([]);
+    const [projects, setProjects] = useState<Array<{ name: string, location: string, status: string }>>([]);
 
     useEffect(() => {
         fetch('/api/projects')
@@ -76,6 +76,37 @@ export default function Overlay({ isRotating, setIsRotating }: OverlayProps) {
                     <div className="text-2xl font-bold font-mono">12 <span className="text-sm text-gray-500 font-normal">/ 15</span></div>
                     <div className="mt-2 text-xs text-accent-green flex items-center gap-1">
                         <Zap className="w-3 h-3" /> +3 deployed today
+                    </div>
+                </div>
+
+                {/* Legend / Index Box */}
+                <div className="glass-panel p-4 rounded-xl border-l-4 border-l-polyglow">
+                    <h3 className="text-xs font-bold text-gray-400 mb-3 uppercase tracking-wider">Map Index</h3>
+
+                    <div className="space-y-3">
+                        {/* Red Item */}
+                        <div className="flex items-center gap-3">
+                            <div className="relative flex-shrink-0">
+                                <div className="w-3 h-3 bg-accent-red/20 border border-accent-red rounded-sm"></div>
+                                <div className="absolute inset-0 bg-accent-red blur-sm opacity-50"></div>
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-xs font-bold text-gray-200">Conflict Zone</span>
+                                <span className="text-[10px] text-gray-500">Active Hostility / Risk</span>
+                            </div>
+                        </div>
+
+                        {/* Green Item */}
+                        <div className="flex items-center gap-3">
+                            <div className="relative flex-shrink-0">
+                                <div className="w-3 h-3 bg-accent-green/20 border border-accent-green rounded-full"></div>
+                                <div className="absolute inset-0 bg-accent-green blur-sm opacity-50 rounded-full"></div>
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-xs font-bold text-gray-200">Project Deployed</span>
+                                <span className="text-[10px] text-gray-500">Live Operations</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

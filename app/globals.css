@@ -53,3 +53,35 @@ body {
   border-color: var(--color-polyglow);
   box-shadow: 0 0 10px var(--color-polyglow-dim), inset 0 0 5px var(--color-polyglow-dim);
 }
+
+/* Mapbox GL Draw Compatibility with MapLibre */
+/* Since we are using mapbox-gl-draw with maplibre-gl, class names mismatch */
+.mapboxgl-ctrl-group {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+.mapboxgl-ctrl-group>button {
+  width: 30px;
+  height: 30px;
+  display: block;
+  padding: 0;
+  outline: none;
+  border: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.mapboxgl-ctrl-group>button:last-child {
+  border-bottom: none;
+}
+
+.mapboxgl-ctrl-group>button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}

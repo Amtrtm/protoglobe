@@ -5,6 +5,7 @@ import GlobeViz from '@/components/GlobeViz';
 import Overlay from '@/components/Overlay';
 import ProjectMarkers, { Project } from '@/components/ProjectMarkers';
 import StreaksOverlay from '@/components/StreaksOverlay';
+import ConflictZones from '@/components/ConflictZones';
 
 export default function Home() {
   const [isRotating, setIsRotating] = useState(true);
@@ -24,6 +25,7 @@ export default function Home() {
       <GlobeViz autoRotate={isRotating}>
         <ProjectMarkers projects={projects} />
         <StreaksOverlay projects={projects} />
+        <ConflictZones />
       </GlobeViz>
 
       {/* UI Overlay Layer */}
